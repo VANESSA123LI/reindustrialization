@@ -248,62 +248,10 @@
     @keyframes tick { to { transform: translateX(-50%); } }
 
     /* ---------- Why ---------- */
-    .why h2, .who h2 {
+    .why h2 {
       font-size: clamp(1.75rem, 3.6vw, 2.75rem);
-      margin-bottom: 3.5rem;
       min-height: 1.1em;
     }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--line);
-    }
-
-    .why-item {
-      padding: 2.25rem 2.5rem 2.5rem;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      transition: background 0.25s ease;
-    }
-    .why-item:nth-child(2n) { border-right: none; }
-    .why-item:nth-child(n+3) { border-bottom: none; }
-    .why-item:hover { background: var(--bg-raise); }
-
-    .why-item .num {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      color: var(--dim2);
-      display: block;
-      margin-bottom: 1.25rem;
-      transition: color 0.25s ease;
-    }
-    .why-item:hover .num { color: var(--accent); }
-
-    .why-item h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.625rem;
-    }
-
-    .why-item p { color: var(--dim); font-size: 0.9375rem; }
-
-    /* ---------- Who ---------- */
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--line);
-    }
-
-    .who-card {
-      padding: 2.25rem 1.75rem 2.5rem;
-      border-right: 1px solid var(--line);
-      transition: background 0.25s ease;
-    }
-    .who-card:last-child { border-right: none; }
-    .who-card:hover { background: var(--bg-raise); }
 
     .pxi {
       display: grid;
@@ -318,16 +266,6 @@
       background: var(--dim2);
       transition: background 0.3s ease;
     }
-    .who-card:hover .pxi i { background: var(--accent); }
-
-    .who-card h3 {
-      font-size: 1.0625rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
-
-    .who-card p { color: var(--dim); font-size: 0.875rem; }
 
     /* ---------- Join (inverted) ---------- */
     .join {
@@ -497,18 +435,9 @@
       .hero-head { padding: 3.5rem 1.5rem 2.5rem; }
       .hero-card { margin-left: 1.5rem; width: min(580px, calc(100% - 3rem)); }
       .art-caption { right: 1rem; }
-      .who-grid { grid-template-columns: 1fr 1fr; }
-      .who-card:nth-child(2n) { border-right: none; }
-      .who-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
     }
 
     @media (max-width: 640px) {
-      .why-grid { grid-template-columns: 1fr; }
-      .why-item { border-right: none; border-bottom: 1px solid var(--line); }
-      .why-item:last-child { border-bottom: none; }
-      .who-grid { grid-template-columns: 1fr; }
-      .who-card { border-right: none; border-bottom: 1px solid var(--line); }
-      .who-card:last-child { border-bottom: none; }
       .hero-art { height: 50vh; }
       .hero-card { margin-top: -90px; padding: 1.75rem 1.5rem; }
       .signup-form { flex-direction: column; align-items: stretch; }
@@ -572,57 +501,6 @@
       <div class="inner">
         <span class="eyebrow reveal">Why this matters</span>
         <h2 class="scramble" data-text="The atoms are waiting.">The atoms are waiting.</h2>
-        <div class="why-grid reveal">
-          <div class="why-item">
-            <span class="num">01 / Opportunity</span>
-            <h3>Legacy sectors are wide open</h3>
-            <p>Trillion-dollar industries — manufacturing, energy, construction, logistics — still run on decades-old tooling. The gap between what's possible and what's deployed has never been wider.</p>
-          </div>
-          <div class="why-item">
-            <span class="num">02 / Timing</span>
-            <h3>AI just changed the equation</h3>
-            <p>For the first time, small teams can automate what once took armies of specialists. The technology to rebuild these industries finally exists. It needs people who can wield it.</p>
-          </div>
-          <div class="why-item">
-            <span class="num">03 / Talent</span>
-            <h3>Young talent moves fastest</h3>
-            <p>The people best positioned to apply frontier technology are the ones who grew up with it. Incumbents won't reinvent themselves — outsiders will.</p>
-          </div>
-          <div class="why-item">
-            <span class="num">04 / Scale</span>
-            <h3>The impact is physical</h3>
-            <p>Software touched screens. This touches everything — what we build, how we power it, how it moves. The scale of the opportunity is the scale of civilization itself.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="who ruled">
-      <div class="inner">
-        <span class="eyebrow reveal">Who we're looking for</span>
-        <h2 class="scramble" data-text="People who build.">People who build.</h2>
-        <div class="who-grid reveal">
-          <div class="who-card">
-            <div class="pxi" data-icon="flask" aria-hidden="true"></div>
-            <h3>AI Researchers</h3>
-            <p>Taking models out of the lab and onto the factory floor.</p>
-          </div>
-          <div class="who-card">
-            <div class="pxi" data-icon="flag" aria-hidden="true"></div>
-            <h3>Founders</h3>
-            <p>Starting companies in sectors others overlook.</p>
-          </div>
-          <div class="who-card">
-            <div class="pxi" data-icon="gear" aria-hidden="true"></div>
-            <h3>Engineers</h3>
-            <p>Writing software that moves atoms, not just bits.</p>
-          </div>
-          <div class="who-card">
-            <div class="pxi" data-icon="sliders" aria-hidden="true"></div>
-            <h3>Operators</h3>
-            <p>Scaling real-world operations with modern tools.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -680,46 +558,6 @@
 
   /* ============ Pixel icons ============ */
   var ICONS = {
-    flask: [
-      '..#..#..',
-      '..#..#..',
-      '..#..#..',
-      '.#....#.',
-      '.#....#.',
-      '#......#',
-      '#.####.#',
-      '.######.'
-    ],
-    flag: [
-      '########',
-      '#####...',
-      '########',
-      '#.......',
-      '#.......',
-      '#.......',
-      '#.......',
-      '#.......'
-    ],
-    gear: [
-      '.#.##.#.',
-      '########',
-      '.######.',
-      '###..###',
-      '###..###',
-      '.######.',
-      '########',
-      '.#.##.#.'
-    ],
-    sliders: [
-      '..##....',
-      '########',
-      '..##....',
-      '........',
-      '.....##.',
-      '########',
-      '.....##.',
-      '........'
-    ],
     check: [
       '........',
       '.......#',
