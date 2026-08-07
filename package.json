@@ -1,0 +1,9 @@
+{
+  "name": "project-reindustrialization",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One-page site for Project Reindustrialization",
+  "scripts": {
+    "dev": "python3 -m http.server 3000"
+  }
+}
